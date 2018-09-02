@@ -37,10 +37,11 @@ export class AddEventComponent implements OnInit {
   }
 
   submitEvent(){
-    if(!this.addEventForm.valid){
+    if(this.addEventForm.invalid){
       this._messageService.addMessage(
         new Message('Please validate form', 'error')
       )
+      return;
     }
     this._userService.addEvent( JSON.stringify(this.addEventForm.value))
     .subscribe(

@@ -1,0 +1,22 @@
+<div class="row text-center">
+  <div class="col-3">
+    <strong> Event Name </strong>
+  </div>
+  <div class="col-3">
+    <strong> Organiser </strong>
+  </div>
+  <div class="col-3">
+    <strong> Time </strong>
+  </div>
+  <div class="col-3">
+    <strong> Location </strong>
+  </div>
+</div>
+
+  <div class="row" *ngFor=" let event of events">
+    <div class="col-3">{{event.eventName}}</div>
+    <div class="col-3">{{event.eventOrganiser}}</div>
+    <div class="col-3">{{event.eventTime | date:'MMM d, y, h:mm'}}</div>
+    <div class="col-3">{{event.eventLocation}}</div>
+  </div>
+

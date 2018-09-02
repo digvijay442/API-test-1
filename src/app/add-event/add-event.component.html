@@ -1,0 +1,36 @@
+
+<div class="container">	
+    <div class="row">
+    <h2>Add Event</h2><br/>
+      <div class="col-12">
+        <!-- Start form -->
+                      <form [formGroup]="addEventForm">
+                        <div class="form-group">
+                          <label for="inputEventName">Event Name</label>
+                          <input type="text" formControlName="eventName" class="form-control" id="inputEventName" aria-describedby="event Name" placeholder="Event name">
+                        </div>
+                        <div class="form-group">
+                          <label for="InputEventOrganiser">Organiser</label>
+                          <input type="text" formControlName="eventOrganiser" class="form-control" name="organiser" id="InputEventOrganiser" placeholder="Organiser">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleEventTime">Date and Time</label>
+                            <input type="datetime-local" formControlName="eventTime" class="form-control" name="eventTime" id="exampleEventTime" placeholder="Event time">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleEventTime">Location</label>
+                            <input type="text" formControlName="eventLocation" class="form-control" name="eventLocation" id="InputEventLocation" placeholder="Event location">
+                        </div>
+                        <div class="form-check">
+                          <!-- <button class="btn btn-info" type="button" name="showpassword" id="showpassword" value="Show Password">Show password</button>  -->
+                          <button type="submit" class="btn btn-primary" (click)="submitEvent()">Submit</button>
+  
+                        </div>
+                        
+                      </form>
+  
+  
+        <!-- End form -->
+      </div>
+    </div>
+  </div>

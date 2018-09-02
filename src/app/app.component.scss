@@ -1,0 +1,13 @@
+$minWidth: 50%;
+$background: #f2f2f2;
+
+.custom-container{
+    min-width: $minWidth;
+    margin: 0 auto;
+    background: $background;
+    margin-top: 1%;
+}
+
+.msg-container {
+    height: 100px;
+}
